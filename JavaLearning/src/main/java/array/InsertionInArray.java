@@ -1,4 +1,3 @@
-
 package array;
 
 import java.util.Scanner;
@@ -8,7 +7,7 @@ public class InsertionInArray {
         Scanner input = new Scanner(System.in);
         int [] array = new int[5];
         
-        System.out.println("Enter 5 integer : ");
+        System.out.print("Enter 5 integer : ");
         for (int i = 0; i < array.length; i++) {
             array[i] = input.nextInt();
         }
