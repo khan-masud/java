@@ -16,11 +16,6 @@ public class ForEachLoop {
             array[i] = input.next(); // Input separeting by whitespace
         }
         
-        System.out.print("Names are 1 : ");
-        for (int i = 0; i < size; i++) {
-            System.out.print(i + " ");
-        }
-        
         // For each loop
         System.out.print("Names are : ");
         for (String x : array) {
