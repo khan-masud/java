@@ -27,7 +27,7 @@ public class Array2D {
         // Print the array
         for(int [] values : array) {
             for (int value : values) {
-                System.out.println(" " + value);
+                System.out.print(" " + value);
             }
         }
     }
