@@ -1,53 +1,53 @@
 package SmallProject;
 
-import java.util.Scanner;
-
 public class Array2DSum {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
         
-        // Input for array 1
-        System.out.print("Enter total number of elements of 1st array: ");
-        int array1_size = input.nextInt();
-        int[] array1 = new int[array1_size];
-        System.out.println("Enter values of array 1: ");
-        for (int i = 0; i < array1_size; i++) {
-            System.out.print("Value of number " + (i + 1) + ": ");
-            array1[i] = input.nextInt();
-        }
-
-        // Input for array 2
-        System.out.print("Enter total number of elements of 2nd array: ");
-        int array2_size = input.nextInt();
-        int[] array2 = new int[array2_size];
-        System.out.println("Enter values of array 2: ");
-        for (int i = 0; i < array2_size; i++) {
-            System.out.print("Value of number " + (i + 1) + ": ");
-            array2[i] = input.nextInt();
-        }
-
-        // Input for array 3
-        System.out.print("Enter total number of elements of 3rd array: ");
-        int array3_size = input.nextInt();
-        int[] array3 = new int[array3_size];
-        System.out.println("Enter values of array 3: ");
-        for (int i = 0; i < array3_size; i++) {
-            System.out.print("Value of number " + (i + 1) + ": ");
-            array3[i] = input.nextInt();
-        }
-
-        // Initializing the main 2D array (array of arrays)
-        int[][] array = {{array1}, {array2}, {array3}};
+        int [][] array = {{5,3,10},{4,25,57,2},{11,4}};
         
-        int [][] array = {{1,3,4},{4,6,7,5},{9,5}};
-
-        // Displaying the arrays
-        System.out.println("The arrays are: ");
-        for(int[] x : array) {
-            for (int y : x) {
-                System.out.println(y + " ");
+        // Sum of whole array
+        int wholeArraySum = 0;
+        for(int [] x : array) {
+            for(int y : x) {
+                wholeArraySum = y + wholeArraySum;
             }
-            System.out.println("");
         }
+        System.out.println("The Whole Array Sum : " + wholeArraySum);
+        
+        // Sum of 1st array 
+        int array1Sum = 0;
+        for(int x : array[0]) {
+            array1Sum = array1Sum + x;
+        }
+        System.out.println("Sum Of 1st Array : " + array1Sum);
+        
+        // Sum of 2nd array 
+        int array2Sum = 0;
+        for(int x : array[1]) {
+            array2Sum = array2Sum + x;
+        }
+        System.out.println("Sum Of 1st Array : " + array2Sum);
+        
+        // Sum of 3rd array 
+        int array3Sum = 0;
+        for(int x : array[2]) {
+            array3Sum = array3Sum + x;
+        }
+        System.out.println("Sum Of 1st Array : " + array3Sum);
+        
+        // Check even or odd of sum
+        int [] arrayOfSum = {wholeArraySum, array1Sum, array2Sum, array3Sum};
+        int even = 0;
+        int odd = 0;
+        for (int i = 0; i < arrayOfSum.length; i++) {
+            if(arrayOfSum[i] % 2 == 0) {
+                even++;
+            }
+            else {
+                odd++;
+            }
+        }
+        System.out.println("Number Of Even Sum : " + even);
+        System.out.println("Number Of Odd Sum : " + odd);
     }
 }
