@@ -2,7 +2,6 @@ package SmallProject;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-// Masud
 
 public class ArrayOperation {
     public static void main(String[] args) {
