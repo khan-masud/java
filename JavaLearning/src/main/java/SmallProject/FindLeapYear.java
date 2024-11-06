@@ -1,5 +1,4 @@
 package SmallProject;
-
 import java.util.Scanner;
 
 public class FindLeapYear {
